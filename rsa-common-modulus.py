@@ -1,27 +1,5 @@
 #! /usr/bin/env python3
 
-# This program requires Python 3.8 or later
-
-# The RSA Common Modulus Attack can be described as follows.
-# If a single plaintext has been encrypted to two ciphertexts
-# by private keys that have have same modulus but different exponent,
-# this plaintext can be recovered if gcd(e1, e2) = 1 and gcd(ct2, n)=1
-
-# This is a script originally written by Andreas Pogiatzis in 2018
-# https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5
-# Maxim Masiutin ported this script in 2021 to Python 3 and added the option to configure output format,
-# and the code to check that the plaintexts from both decrypted messages to be the same.
-
-# Copyright 2018 Andreas Pogiatzis
-# Copyright 2021 Maxim Masiutin
-
-# References:
-# 1. John M. Delaurentis "A further weakness in the common modulus protocol for the RSA cryptoalgorithm", Cryptologia (1984), vol. 8, nr. 3, pag. 253-259, doi 10.1080/0161-118491859060, Taylor & Francis;
-# 2. Wen-Guey Tzeng "Common modulus and chosen-message attacks on public-key schemes with linear recurrence relations", Information Processing Letters (1999), vol. 70, Issue 3, Pages 153-156, ISSN 0020-0190, 
-# 3. Hinek, M. and Charles C. Y. Lam. "Common modulus attacks on small private exponent RSA and some fast variants (in practice)." J. Math. Cryptol. (2010);
-# 4. Andreas Pogiatzis "RSA Attacks: Common Modulus" <https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5> InfoSec Write-ups (2018).
-
-
 import argparse
 import sys
 
