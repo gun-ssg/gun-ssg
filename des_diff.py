@@ -39,7 +39,7 @@ encrypted_scrambled = des_encrypt_ecb(scrambled, key)
 
 
 print("\nResults:")
-print("Encrypted Original Text (Hex):", encrypted_original)
-print("Encrypted Scrambled Text (Hex):", encrypted_scrambled)
-print("Original Plaintext (Hex):", original.hex())
-print("Scrambled Plaintext (Hex):", scrambled.hex())
+print("Original Plaintext (Hex):", original.hex().upper())
+print("Scrambled Plaintext (Hex):", scrambled.hex().upper())
+print("Encrypted Original Text (Hex):", encrypted_original.upper())
+print("Encrypted Scrambled Text (Hex):", encrypted_scrambled.upper())
