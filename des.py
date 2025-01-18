@@ -9,6 +9,8 @@ def des_encrypt_ecb(text, key):
 
     key = key.encode('utf-8')
     text = text.encode('utf-8')
+    text = "{:0>16x}".format(int.from_bytes(text, 'big'))
+    text = bytearray.fromhex(text)
 
     text_padded = pad(text, DES.block_size)
 
@@ -20,7 +22,6 @@ def des_encrypt_ecb(text, key):
 
 text = input("Enter a string to encrypt (max 8 characters): ")
 key = input("Enter an 8-character encryption key: ")
-
 
 encrypted_text = des_encrypt_ecb(text, key)
 print("Encrypted Hex:", encrypted_text)
